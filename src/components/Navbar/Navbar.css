@@ -1,0 +1,129 @@
+.navbar {
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    font-size: 14px;
+    color: #e5e5e5;
+    background-color: black; 
+    z-index: 1;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.navbar-left img {
+    width: 90px; 
+    height: auto; 
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar-left ul li {
+    cursor: pointer;
+    color: #e5e5e5; 
+    font-weight: 400;
+    transition: color 0.3s ease; 
+}
+
+.navbar-left ul li:hover {
+    color: red; 
+}
+
+.navbar-left ul li.active {
+    color: red;
+    font-weight: bold; 
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-right .icons {
+    width: 20px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.navbar-right .icons:hover {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(555%) hue-rotate(350deg) brightness(94%) contrast(101%);
+}
+
+.navbar-right .profile-img {
+    border-radius: 4px;
+    width: 35px;
+    transition: filter 0.3s ease;
+}
+
+.navbar-right .profile-img:hover {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(555%) hue-rotate(350deg) brightness(94%) contrast(101%);
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 18px 22px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown p {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown {
+    display: block;
+}
+
+.nav-dark {
+    background: #141414;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar ing {
+        height: 25px;
+    }    
+}
+
+@media (max-width: 500px) {
+    .navbar img {
+        height: 20px;
+    }
+    .navbar-right {
+        gap: 10px;
+    }
+}
